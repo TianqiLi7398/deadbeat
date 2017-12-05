@@ -1,11 +1,32 @@
-# TensorFlow Models
+# Deadbeat notandum
 
-This repository contains a number of different models implemented in [TensorFlow](https://www.tensorflow.org):
+This repository contains research records (data, plots, code) for Minitar Hopper deadbeat control. This project is conducted by Lab of Prof. Sam Burden in University of Washington, collaborated with Lab of Prof. Shai Revzen in University of Michigan.
 
-The [official models](official) are a collection of example models that use TensorFlow's high-level APIs. They are intended to be well-maintained, tested, and kept up to date with the latest stable TensorFlow API. They should also be reasonably optimized for fast performance while still being easy to read. We especially recommend newer TensorFlow users to start here.
+The readme file will keep updated.
 
-The [research models](research) are a large collection of models implemented in TensorFlow by researchers. It is up to the individual researchers to maintain the models and/or provide support on issues and pull requests.
+## Updates
+### Dec 5th 
+Tianqi redesigned this repo to make it readable.
 
-The [samples folder](samples) contains code snippets and smaller models that demonstrate features of TensorFlow, including code presented in various blog posts.
+### Nov 30
+Data collected for look-up table.
+Method:
+- hopper jumps 20 times per stair transition, stair transitted randomly. Stair height: {-5, 0, 5, 10, 15} mm.
+- 2 Markers's trajectory (x,y,t) (Foot and Top) captured at 1kHz by Qualysis, offline (recorded and exported to .mat files in Qualysis software)
+- 2 Motors angle (theta_1, theta_2, t) collected by Arduino mainboard in 100 Hz.
+- Plot shows no obvious change in Top Marker after each transition. Higher stair required.
 
-The [tutorials folder](tutorials) is a collection of models described in the [TensorFlow tutorials](https://www.tensorflow.org/tutorials/).
+### Nov 14
+Data collected for look-up table.
+Method:
+- hopper jumps 20 times per stair transition, stair transitted randomly. Stair height: {-5, 0, 5, 10, 15} mm.
+- 2 Markers's trajectory (x,y,t) (Foot and Top) captured at 100 Hz by Qualysis, real-time (use pyserial to stream data from Qualysis into VirtualMachine).
+- 2 Motors angle (theta_1, theta_2, t) collected by Arduino mainboard in 100 Hz.
+- Smoother trajectory required.
+
+## Repo Notation
+### data
+All data(raw and processed) will go in this data, with notation of collected date
+
+### plot
+plot result of specific dataset collected
