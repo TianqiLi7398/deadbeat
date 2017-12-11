@@ -2,11 +2,12 @@
 
 ## Experiments: 3 Trails
 In each trail, there are 2 mins long data collected.
-- Qualysis(Camera): 1kHz Capture rate, Unit in pixel
+- Qualysis(Camera): 1kHz Capture rate, Unit in mm
 - Arduino(Motor): 100Hz Capture rate, Unit rad
 *** Specially, in the end of first trail, you can see there is a failure jump. Please exclude that.
 
-## Raw files: CSV files
+## Datas
+### Raw Data files: CSV files
 
 Ard: Arduino files, data of motor angle
 - time: (in sec)
@@ -14,5 +15,5 @@ Ard: Arduino files, data of motor angle
 
 Qua: Non-calibrated files of Foot and Top trajectory
 
-## Processed files: json files
+### Processed Data files: json files
 In json files, all top and foot data are calibirated as unit of millimeter.
